@@ -3,6 +3,7 @@ import './App.css';
 import {Header} from "./site/Header.tsx";
 import {Body} from "./site/Body.tsx";
 import {Footer} from "./site/Footer.tsx";
+import {NewComponent} from "./site/NewComponent.tsx";
 
 
 // Hi Guys!
@@ -130,7 +131,8 @@ function App() {
     return (
         <>
             <Header title={'New Header'}/>
-            <Body titleForBody={'New Body'}/>
+            {/*<Body titleForBody={'New Body'}/>*/}
+            <NewComponent/>
             <Footer titleForFooter={'New Footer'}/>
         </>
     );
