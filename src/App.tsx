@@ -129,7 +129,7 @@ function App() {
 
     return (
         <>
-            <Header/>
+            <Header title={'New Body'}/>
             <Body/>
             <Footer/>
         </>
