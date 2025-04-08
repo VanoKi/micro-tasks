@@ -6,7 +6,15 @@ import { createRoot } from 'react-dom/client';
 
 const container  = document.getElementById('root') as HTMLElement
 const root = createRoot(container);
-root.render(<App />);
+// root.render(<App />);
+root.render(
+    <>
+        <App/>
+        <div>111</div>
+        <div>111</div>
+        <div>111</div>
+    </>
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
