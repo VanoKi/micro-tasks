@@ -129,9 +129,9 @@ function App() {
 
     return (
         <>
-            <Header title={'New Body'}/>
-            <Body/>
-            <Footer/>
+            <Header title={'New Header'}/>
+            <Body titleForBody={'New Body'}/>
+            <Footer titleForFooter={'New Footer'}/>
         </>
     );
 }
