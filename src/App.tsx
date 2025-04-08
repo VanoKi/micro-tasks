@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import {Header} from "./Header.tsx";
+import {Header} from "./site/Header.tsx";
+import {Body} from "./site/Body.tsx";
 
 
 // Hi Guys!
@@ -126,7 +127,10 @@ function App() {
     // }
 
     return (
-        <Header/>
+        <>
+            <Header/>
+            <Body/>
+        </>
     );
 }
 
