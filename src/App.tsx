@@ -126,7 +126,7 @@ function App() {
 
     return (
         <div className="App">
-            Рудд Ворлд
+
         </div>
     );
 }
