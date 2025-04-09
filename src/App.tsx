@@ -126,17 +126,17 @@ function App() {
     //         'Micheal Talbot95',
     //     ]
     // }
-    const Button1Foo = (follower: string) => {
-        console.log(follower)
+    const Button1Foo = (follower: string, age: number) => {
+        console.log(follower, age)
     }
-    const Button2Foo = (follower: string) => {
-        console.log(follower)
+    const Button2Foo = (follower: string, age: number) => {
+        console.log(follower, age)
     }
     return (
         <>
-            <Button name={'MyYouTubeChannel-1'} callBack={() => Button1Foo('I`m Vasya')}/>
-            <Button name={'MyYouTubeChannel-2'} callBack={() => Button2Foo('I`m Ivan')}/>
-            <Button name={'Delete'}/>
+            <Button name={'MyYouTubeChannel-1'} callBack={() => Button1Foo('I`m Vasya', 21)}/>
+            <Button name={'MyYouTubeChannel-2'} callBack={() => Button2Foo('I`m Ivan', 37)}/>
+            <Button name={'i`m stupid btn'}/>
         </>
     );
 }
