@@ -157,9 +157,9 @@ function App() {
         //nothing
         return console.log('click')
     }
-    const foo2 = (e: string) => {
+    const foo2 = (e: number) => {
         //100200
-        return e
+        return console.log(e)
     }
 
     return (
@@ -177,7 +177,7 @@ function App() {
             {/*    MyYouTubeChannel-4*/}
             {/*</button>*/}
             <button onClick={foo1}>1</button>
-            <button onClick={() => foo2("100299")}>2</button>
+            <button onClick={() => foo2(100299)}>2</button>
         </>
     );
 }
