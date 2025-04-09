@@ -8,13 +8,17 @@ type StudentType = {
     age: number
 }
 
-export const NewComponent = (props: NewComponentType) => {
+export const NewComponent = ({students}: NewComponentType) => {
     // debugger
     return (
         <ul>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
+            {students.map(
+                (objectFromStudentArray, index) => {
+                    return (
+                        <li>{objectFromStudentArray.name}</li>
+                    )
+                }
+            )}
         </ul>
     )
 }
