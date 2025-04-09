@@ -131,6 +131,7 @@ function App() {
         <>
             <Button name={'MyYouTubeChannel-1'}/>
             <Button name={'MyYouTubeChannel-2'}/>
+            <Button name={'Delete'}/>
         </>
     );
 }
