@@ -5,14 +5,12 @@ import {Body} from "./site/Body.tsx";
 import {Footer} from "./site/Footer.tsx";
 import {NewComponent} from "./site/NewComponent.tsx";
 import {MouseEvent} from "react";
-
+import {Button} from "./site/components/Button.tsx";
 
 // Hi Guys!
 // Let's reinforce our current session!
 // -You have 2 arrays. You should create a new component TASKS, where you will render these arrays.
 // -Don't forget to assign types to our data.
-
-
 
 function App() {
     // const data1 = {
@@ -158,9 +156,7 @@ function App() {
             {/*<button onClick={(event) => {alert('Hello!')}}>*/}
             {/*    MyYouTubeChannel-1*/}
             {/*</button>*/}
-            <button onClick={(event) => onClickHandler("Vasya")}>
-                MyYouTubeChannel-2
-            </button>
+            <Button/>
             <button onClick={(event) => onClickHandler("Vano")}>
                 MyYouTubeChannel-3
             </button>
