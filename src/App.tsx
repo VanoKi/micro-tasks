@@ -149,17 +149,8 @@ function App() {
     // const mySecondSubscriber = (event: MouseEvent<HTMLButtonElement>) => {
     //     console.log(`Hello i'm Vano`)
     // }
-    // const onClickHandler = (name: string) => {
-    //     return console.log(`My name is ${name}`)
-    // }
-
-    const foo1 = () => {
-        //nothing
-        return console.log('click')
-    }
-    const foo2 = (e: number) => {
-        //100200
-        return console.log(e)
+    const onClickHandler = (name: string) => {
+        return console.log(`My name is ${name}`)
     }
 
     return (
@@ -167,17 +158,12 @@ function App() {
             {/*<button onClick={(event) => {alert('Hello!')}}>*/}
             {/*    MyYouTubeChannel-1*/}
             {/*</button>*/}
-            {/*<button onClick={(event) => onClickHandler("Vasya")}>*/}
-            {/*    MyYouTubeChannel-2*/}
-            {/*</button>*/}
-            {/*<button onClick={(event) => onClickHandler("Vano")}>*/}
-            {/*    MyYouTubeChannel-3*/}
-            {/*</button>*/}
-            {/*<button onClick={() => onClickHandler("Sam")}>*/}
-            {/*    MyYouTubeChannel-4*/}
-            {/*</button>*/}
-            <button onClick={foo1}>1</button>
-            <button onClick={() => foo2(100299)}>2</button>
+            <button onClick={(event) => onClickHandler("Vasya")}>
+                MyYouTubeChannel-2
+            </button>
+            <button onClick={(event) => onClickHandler("Vano")}>
+                MyYouTubeChannel-3
+            </button>
         </>
     );
 }
