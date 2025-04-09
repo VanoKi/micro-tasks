@@ -15,7 +15,10 @@ export const NewComponent = ({students}: NewComponentType) => {
             {students.map(
                 (objectFromStudentArray, index) => {
                     return (
-                        <li>{objectFromStudentArray.name}</li>
+                        <li key={objectFromStudentArray.id}>
+                            <span>{objectFromStudentArray.name}</span>
+                            <span>{objectFromStudentArray.age}</span>
+                        </li>
                     )
                 }
             )}
