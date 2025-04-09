@@ -126,11 +126,16 @@ function App() {
     //         'Micheal Talbot95',
     //     ]
     // }
-
+    const Button1Foo = () => {
+        console.log('I`m Vasya')
+    }
+    const Button2Foo = () => {
+        console.log('I`m Ivan')
+    }
     return (
         <>
-            <Button name={'MyYouTubeChannel-1'}/>
-            <Button name={'MyYouTubeChannel-2'}/>
+            <Button name={'MyYouTubeChannel-1'} callBack={Button1Foo}/>
+            <Button name={'MyYouTubeChannel-2'} callBack={Button2Foo}/>
             <Button name={'Delete'}/>
         </>
     );
