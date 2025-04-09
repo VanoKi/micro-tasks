@@ -157,11 +157,14 @@ function App() {
             {/*<button onClick={(event) => {alert('Hello!')}}>*/}
             {/*    MyYouTubeChannel-1*/}
             {/*</button>*/}
-            <button onClick={onClickHandler}>
+            <button onClick={(event) => onClickHandler("Vasya")}>
                 MyYouTubeChannel-2
             </button>
-            <button onClick={onClickHandler}>
+            <button onClick={(event) => onClickHandler("Vano")}>
                 MyYouTubeChannel-3
+            </button>
+            <button onClick={() => onClickHandler("Sam")}>
+                MyYouTubeChannel-4
             </button>
         </>
     );
