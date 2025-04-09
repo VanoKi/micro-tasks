@@ -157,9 +157,7 @@ function App() {
             {/*    MyYouTubeChannel-1*/}
             {/*</button>*/}
             <Button/>
-            <button onClick={(event) => onClickHandler("Vano")}>
-                MyYouTubeChannel-3
-            </button>
+            <Button/>
         </>
     );
 }
