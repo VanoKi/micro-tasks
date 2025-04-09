@@ -4,6 +4,7 @@ import {Header} from "./site/Header.tsx";
 import {Body} from "./site/Body.tsx";
 import {Footer} from "./site/Footer.tsx";
 import {NewComponent} from "./site/NewComponent.tsx";
+import {MouseEvent} from "react";
 
 
 // Hi Guys!
@@ -142,10 +143,21 @@ function App() {
     //     {id: 11, name: "Christopher", age: 100},
     // ]
 
+    const myFirstSubscriber = (name: string) => {
+        alert(`Hello i'm ${name}`)
+    }
     return (
-        <button onClick={() => {alert('Hello!')}}>
-            MyYouTubeChannel-1
-        </button>
+        <>
+            {/*<button onClick={(event) => {alert('Hello!')}}>*/}
+            {/*    MyYouTubeChannel-1*/}
+            {/*</button>*/}
+            <button onClick={() => myFirstSubscriber('Vasya')}>
+                MyYouTubeChannel-2
+            </button>
+            <button onClick={() => myFirstSubscriber('Vanya')}>
+                MyYouTubeChannel-3
+            </button>
+        </>
     );
 }
 
