@@ -1,7 +1,11 @@
-export const Button = () => {
+type ButtonTitle = {
+    name: string
+}
+
+export const Button = (props: ButtonTitle) => {
     return (
         <button>
-            MyYouTubeChanel-1
+            {props.name}
         </button>
     )
 }
