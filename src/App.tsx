@@ -143,18 +143,24 @@ function App() {
     //     {id: 11, name: "Christopher", age: 100},
     // ]
 
-    const myFirstSubscriber = (name: string) => {
-        alert(`Hello i'm ${name}`)
+    // const myFirstSubscriber = (event: MouseEvent<HTMLButtonElement>) => {
+    //     console.log(`Hello i'm Vasya`)
+    // }
+    // const mySecondSubscriber = (event: MouseEvent<HTMLButtonElement>) => {
+    //     console.log(`Hello i'm Vano`)
+    // }
+    const onClickHandler = (name: string) => {
+        return console.log(`My name is ${name}`)
     }
     return (
         <>
             {/*<button onClick={(event) => {alert('Hello!')}}>*/}
             {/*    MyYouTubeChannel-1*/}
             {/*</button>*/}
-            <button onClick={() => myFirstSubscriber('Vasya')}>
+            <button onClick={onClickHandler}>
                 MyYouTubeChannel-2
             </button>
-            <button onClick={() => myFirstSubscriber('Vanya')}>
+            <button onClick={onClickHandler}>
                 MyYouTubeChannel-3
             </button>
         </>
