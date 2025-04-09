@@ -8,20 +8,27 @@ type StudentType = {
     age: number
 }
 
-export const NewComponent = ({students}: NewComponentType) => {
-    // debugger
+export const NewComponent = () => {
+    const topCars = [
+        {manufacturer:'BMW', model:'m5cs'},
+        {manufacturer:'Mercedes', model:'e63s'},
+        {manufacturer:'Audi', model:'rs6'}
+    ]
     return (
-        <ul>
-            {students.map(
-                (objectFromStudentArray, index) => {
-                    return (
-                        <li key={objectFromStudentArray.id}>
-                            <span>{objectFromStudentArray.name}</span>
-                            <span>{objectFromStudentArray.age}</span>
-                        </li>
-                    )
-                }
-            )}
-        </ul>
+        <table>
+            <tr>
+                <th>Manufactured</th>
+                <th>Model</th>
+            </tr>
+            {topCars.map( car => {
+                return(
+                    <tr>
+                        <td>{car.manufacturer}</td>
+                        <td>{car.model}</td>
+                    </tr>
+                )
+            })}
+
+        </table>
     )
 }
