@@ -143,7 +143,7 @@ function App() {
     // ]
 
     return (
-        <button>
+        <button onClick={() => {alert('Hello!')}}>
             MyYouTubeChannel-1
         </button>
     );
