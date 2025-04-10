@@ -137,12 +137,12 @@ function App() {
         {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
     ])
 
-    let currentMoney = money.filter(filteredMoney => filteredMoney.banknots = 'RUBLS')
+    let currentMoney = money.filter(filteredMoney => filteredMoney.banknots === 'RUBLS')
 
     return (
         <>
             <ul>
-                {money.map((objFromMoneyArr, index) => {
+                {currentMoney.map((objFromMoneyArr, index) => {
                     return (
                         <li key={index}>
                             <span>{objFromMoneyArr.banknots}--</span>
