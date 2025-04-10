@@ -127,16 +127,16 @@ function App() {
     //     ]
     // }
     const Button1Foo = (follower: string, age: number) => {
-        console.log(follower, age)
+        console.log(`${follower} and I'm ${age} years old`)
     }
     const Button2Foo = (follower: string, age: number) => {
-        console.log(follower, age)
+        console.log(`${follower} and I'm ${age} years old`)
     }
     return (
         <>
             <Button name={'MyYouTubeChannel-1'} callBack={() => Button1Foo('I`m Vasya', 21)}/>
             <Button name={'MyYouTubeChannel-2'} callBack={() => Button2Foo('I`m Ivan', 37)}/>
-            <Button name={'i`m stupid btn'}/>
+            <Button name={'i`m stupid btn'} callBack={() => console.log('i`m a stupid button')}/>
         </>
     );
 }

@@ -1,6 +1,6 @@
 type ButtonTitle = {
     name: string
-    callBack?: () => void
+    callBack: () => void
 }
 
 export const Button = (props: ButtonTitle) => {
