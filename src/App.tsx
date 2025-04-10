@@ -1,9 +1,12 @@
 import {NewNewComponent} from "./site/NewNewComponent.tsx";
+import {useState} from "react";
 
 // Hi Guys!
 // Let's reinforce our current session!
 // -You have 2 arrays. You should create a new component TASKS, where you will render these arrays.
 // -Don't forget to assign types to our data.
+
+type FilterType = 'All' | 'Dollars' | 'RUBLS'
 
 function App() {
     // const data1 = {
@@ -119,8 +122,33 @@ function App() {
     //         'Micheal Talbot95',
     //     ]
     // }
+    const money = [
+        {banknots: 'Dollars', value: 100, number: ' a1234567890'},
+        {banknots: 'Dollars', value: 50, number: ' z1234567890'},
+        {banknots: 'RUBLS', value: 100, number: ' w1234567890'},
+        {banknots: 'Dollars', value: 100, number: ' e1234567890'},
+        {banknots: 'Dollars', value: 50, number: ' c1234567890'},
+        {banknots: 'RUBLS', value: 100, number: ' r1234567890'},
+        {banknots: 'Dollars', value: 50, number: ' x1234567890'},
+        {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
+    ]
+    const [filter, setFilter] = useState<FilterType>('All')
+    let currentMoney = money
+    if (filter === 'RUBLS') {
+        currentMoney = money.filter(filteredMoney => filteredMoney.banknots === 'RUBLS')
+    }
+    if (filter === 'Dollars') {
+        currentMoney = money.filter(filteredMoney => filteredMoney.banknots === 'Dollars')
+    }
+    const onClickFilterHandler = (nameBtn: FilterType) => {
+        console.log(nameBtn)
+        setFilter(nameBtn)
+    }
     return (
-        <NewNewComponent />
+        <NewNewComponent
+            callBack={onClickFilterHandler}
+            money={currentMoney}
+        />
     )
 }
 
