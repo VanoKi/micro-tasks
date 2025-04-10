@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {Header} from "./site/Header.tsx";
 import {Body} from "./site/Body.tsx";
@@ -126,17 +126,17 @@ function App() {
     //         'Micheal Talbot95',
     //     ]
     // }
-    const Button1Foo = (follower: string, age: number) => {
-        console.log(`${follower} and I'm ${age} years old`)
-    }
-    const Button2Foo = (follower: string, age: number) => {
-        console.log(`${follower} and I'm ${age} years old`)
+    // let a = 1
+    let [a, setA] = useState(1)
+    const onclickHandler = () => {
+        setA(++a)
+        // ++a
+        console.log(a)
     }
     return (
         <>
-            <Button name={'MyYouTubeChannel-1'} callBack={() => Button1Foo('I`m Vasya', 21)}/>
-            <Button name={'MyYouTubeChannel-2'} callBack={() => Button2Foo('I`m Ivan', 37)}/>
-            <Button name={'i`m stupid btn'} callBack={() => console.log('i`m a stupid button')}/>
+            <h1>{a}</h1>
+            <button onClick={onclickHandler}>number</button>
         </>
     );
 }
