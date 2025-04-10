@@ -136,9 +136,9 @@ function App() {
         {banknots: 'Dollars', value: 50, number: ' x1234567890'},
         {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
     ])
+    let currentMoney = money
     const onClickFilterHandler = (nameBtn: string) => {
         // console.log(nameBtn)
-        let currentMoney = money
         if (nameBtn == 'RUBLS') {
             currentMoney = money.filter(filteredMoney => filteredMoney.banknots === 'RUBLS')
         }
