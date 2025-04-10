@@ -152,6 +152,11 @@ function App() {
                     )
                 })}
             </ul>
+            <div style={{display: 'flex', flexDirection: 'row', gap: '20px'}}>
+                <button>All</button>
+                <button>RUBLS</button>
+                <button>Dollars</button>
+            </div>
         </>
     );
 }

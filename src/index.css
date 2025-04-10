@@ -22,6 +22,10 @@ body {
   background-color: #e6e5e5;
 }
 
+button {
+  cursor: pointer;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
