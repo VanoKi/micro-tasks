@@ -133,10 +133,14 @@ function App() {
         // ++a
         console.log(a)
     }
+    const zero = () => {
+        setA( a = 0)
+    }
     return (
         <>
             <h1>{a}</h1>
             <button onClick={onclickHandler}>number</button>
+            <button onClick={zero}>0</button>
         </>
     );
 }
