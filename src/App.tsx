@@ -119,7 +119,9 @@ function App() {
     //         'Micheal Talbot95',
     //     ]
     // }
-    <NewNewComponent />
+    return (
+        <NewNewComponent />
+    )
 }
 
 export default App;
