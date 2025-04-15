@@ -126,9 +126,10 @@ function App() {
         {message: 'message2'},
         {message: 'message3'},
     ])
-    const addMessage = () => {
-        console.log('aaa')
-        // setMessage(message)
+    const addMessage = (title: string) => {
+        // console.log(title)
+        let newMessage = {message: 'messageNew'}
+        setMessage([newMessage, ...message])
     }
     return (
         <div className={'App'}>
