@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {FullInput} from "./site/components/FullInput.tsx";
 
 // Hi Guys!
 // Let's reinforce our current session!
@@ -128,6 +129,7 @@ function App() {
 
     return (
         <div className={'App'}>
+            <FullInput />
             {message.map((el, index) => {
                 return (
                     <div key={index}>{el.message}</div>
