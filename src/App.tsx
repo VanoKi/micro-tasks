@@ -1,4 +1,3 @@
-import {NewNewComponent} from "./site/NewNewComponent.tsx";
 import {useState} from "react";
 
 // Hi Guys!
@@ -121,7 +120,7 @@ function App() {
     //     ]
     // }
 
-    let [message, setMessage] = useState([
+    const [message, setMessage] = useState([
         {message: 'message1'},
         {message: 'message2'},
         {message: 'message3'},
@@ -129,16 +128,13 @@ function App() {
 
     return (
         <div className={'App'}>
-            <div>
-                <input type="text"/>
-                <button>+</button>
-            </div>
             {message.map((el, index) => {
                 return (
                     <div key={index}>{el.message}</div>
                 )
             })}
         </div>
+    )
 }
 
 export default App;
