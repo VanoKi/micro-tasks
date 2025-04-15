@@ -1,5 +1,7 @@
 import {useState} from "react";
 import {FullInput} from "./site/components/FullInput.tsx";
+import {Input} from "./site/components/Input.tsx";
+import {Button} from "./site/components/Button.tsx";
 
 // Hi Guys!
 // Let's reinforce our current session!
@@ -133,7 +135,10 @@ function App() {
     }
     return (
         <div className={'App'}>
-            <FullInput addMessage={addMessage}/>
+            <div>
+                <Input/>
+                <Button/>
+            </div>
             {message.map((el, index) => {
                 return (
                     <div key={index}>{el.message}</div>
