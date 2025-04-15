@@ -128,7 +128,7 @@ function App() {
     ])
     const addMessage = (title: string) => {
         // console.log(title)
-        let newMessage = {message: 'messageNew'}
+        let newMessage = {message: title}
         setMessage([newMessage, ...message])
     }
     return (
