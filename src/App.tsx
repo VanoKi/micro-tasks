@@ -123,22 +123,19 @@ function App() {
     //     ]
     // }
 
-    const [message, setMessage] = useState([
+    let [message, setMessage] = useState([
         {message: 'message1'},
         {message: 'message2'},
         {message: 'message3'},
     ])
     const addMessage = (title: string) => {
-        // console.log(title)
-        let newMessage = {message: title}
+        console.log(title)
+        let newMessage={message: title}
         setMessage([newMessage, ...message])
     }
     return (
         <div className={'App'}>
-            <div>
-                <Input/>
-                <Button/>
-            </div>
+            <FullInput addMessage={addMessage}/>
             {message.map((el, index) => {
                 return (
                     <div key={index}>{el.message}</div>
