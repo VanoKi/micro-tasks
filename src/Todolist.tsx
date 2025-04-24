@@ -8,9 +8,10 @@ type TaskType = {
 
 type PropsType = {
   title: string
-  tasks: Array<TaskType>
+  tasks: TaskType[]
   removeTask: (taskId: number) => void
   changeFilter: (value: FilterValuesType) => void
+  removeAll: () => void
 }
 
 export const Todolist = (props: PropsType)=> {
@@ -39,6 +40,7 @@ export const Todolist = (props: PropsType)=> {
       <button onClick={ () => { props.changeFilter("completed") } }>
         Completed
       </button>
+      <button onClick={props.removeAll}>Delete All</button>
     </div>
   </div>
 }

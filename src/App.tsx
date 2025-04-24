@@ -33,12 +33,18 @@ export const App = ()=> {
     setFilter(value);
   }
 
+  function removeAll() {
+    setTasks([])
+  }
+
   return (
     <div className="App">
       <Todolist title="What to learn"
                 tasks={tasksForTodolist}
                 removeTask={removeTask}
-                changeFilter={changeFilter}/>
+                changeFilter={changeFilter}
+                removeAll={removeAll}
+      />
     </div>
   );
 }
