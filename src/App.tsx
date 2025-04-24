@@ -122,7 +122,7 @@ function App() {
 
     return (
         <div className={'App'}>
-            <Tasks/>
+            <Tasks data={data1} />
         </div>
     )
 }

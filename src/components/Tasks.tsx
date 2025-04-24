@@ -1,11 +1,24 @@
 import React from 'react';
 
-const Tasks = () => {
-  return (
-    <ul>
+type TaskType = {
+  taskId: number
+  title: string
+  isDone: boolean
+}
 
-    </ul>
+type TasksPropstType = {
+  title: string
+  tasks: TaskType[]
+}
+
+export const Tasks = (props: TasksPropstType) => {
+  return (
+    <div>
+      <h3>{props.title}</h3>
+      <ul>
+        <li> hard code tag li </li>
+      </ul>
+    </div>
   );
 };
 
-export default Tasks;
