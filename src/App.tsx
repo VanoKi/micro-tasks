@@ -1,4 +1,4 @@
-import Tasks from "./components/Tasks.tsx";
+import {Tasks} from "./components/Tasks.tsx";
 
 // Hi Guys!
 // Let's reinforce our current session!
