@@ -1,7 +1,4 @@
-import {useState} from "react";
-import {FullInput} from "./site/components/FullInput.tsx";
-import {Input} from "./site/components/Input.tsx";
-import {Button} from "./site/components/Button.tsx";
+import Tasks from "./components/Tasks.tsx";
 
 // Hi Guys!
 // Let's reinforce our current session!
@@ -125,9 +122,7 @@ function App() {
 
     return (
         <div className={'App'}>
-            <ul>
-
-            </ul>
+            <Tasks/>
         </div>
     )
 }
