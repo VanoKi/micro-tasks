@@ -17,7 +17,14 @@ export const Tasks = (props: TasksPropstType) => {
     <div>
       <h3>{props.data.title}</h3>
       <ul>
-        <li> hard code tag li </li>
+        {props.data.tasks.map(item => {
+          return (
+            <li>
+              <input type={'checkbox'}/>
+              <span>{item.title}</span>
+            </li>
+          )
+        })}
       </ul>
     </div>
   );
