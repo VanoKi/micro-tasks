@@ -1,4 +1,5 @@
-import {FilterValuesType} from './App';
+// import {FilterValuesType} from './App';
+import {useState} from "react";
 
 type TaskType = {
   id: number
@@ -9,12 +10,40 @@ type TaskType = {
 type PropsType = {
   title: string
   tasks: TaskType[]
-  removeTask: (taskId: number) => void
-  changeFilter: (value: FilterValuesType) => void
-  removeAll: () => void
+  // removeTask: (taskId: number) => void
+  // changeFilter: (value: FilterValuesType) => void
+  // removeAll: () => void
 }
 
-export const Todolist = (props: PropsType)=> {
+export type FilterValuesType = "all" | "active" | "completed";
+
+export const Todolist = (props: PropsType) => {
+  let [tasks, setTasks] = useState(props.tasks)
+
+  let [filter, setFilter] = useState<FilterValuesType>("all");
+
+  let tasksForTodolist = tasks;
+
+  if (filter === "active") {
+    tasksForTodolist = tasks.filter(t => t.isDone === false);
+  }
+  if (filter === "completed") {
+    tasksForTodolist = tasks.filter(t => t.isDone === true);
+  }
+
+  function changeFilter(value: FilterValuesType) {
+    setFilter(value);
+  }
+
+  function removeTask(id: number) {
+    let filteredTasks = tasks.filter(t => t.id != id);
+    setTasks(filteredTasks);
+  }
+
+  function removeAll() {
+    setTasks([])
+  }
+
   return <div>
     <h3>{props.title}</h3>
     <div>
@@ -23,52 +52,23 @@ export const Todolist = (props: PropsType)=> {
     </div>
     <ul>
       {
-        props.tasks.map(t => <li key={t.id}>
-          <input type="checkbox" checked={t.isDone}/>
+        tasksForTodolist.map(t => <li key={t.id}>
+          <input type="checkbox" checked={t.isDone} onChange={() => {}}/>
           <span>{t.title}</span>
-          <button onClick={ () => { props.removeTask(t.id) } }>x</button>
+          <button onClick={() => removeTask(t.id)}>x</button>
         </li>)
       }
     </ul>
     <div className={'button-wrapper'}>
-      <button onClick={ () => { props.changeFilter("all") } }>
-        All
-      </button>
-      <button onClick={ () => { props.changeFilter("active") } }>
-        Active
-      </button>
-      <button onClick={ () => { props.changeFilter("completed") } }>
-        Completed
-      </button>
+      <button onClick={() => changeFilter("all")}>All</button>
+      <button onClick={() => changeFilter("active")}>Active</button>
+      <button onClick={() => changeFilter("completed")}>Completed</button>
     </div>
     <div className={'button-wrapper'}>
-      <button onClick={props.removeAll}>Delete All</button>
+      <button onClick={removeAll}>Delete All</button>
     </div>
   </div>
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //------------------------------------------------------------------------------------------------
