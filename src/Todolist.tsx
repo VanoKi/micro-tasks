@@ -30,7 +30,7 @@ export const Todolist = (props: PropsType)=> {
         </li>)
       }
     </ul>
-    <div>
+    <div className={'button-wrapper'}>
       <button onClick={ () => { props.changeFilter("all") } }>
         All
       </button>
@@ -41,7 +41,7 @@ export const Todolist = (props: PropsType)=> {
         Completed
       </button>
     </div>
-    <div>
+    <div className={'button-wrapper'}>
       <button onClick={props.removeAll}>Delete All</button>
     </div>
   </div>

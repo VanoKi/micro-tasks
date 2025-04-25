@@ -2,6 +2,7 @@
 .App {
   padding: 30px;
   display: flex;
+  flex-direction: column;
 }
 
 .App > div {
@@ -30,4 +31,11 @@ button {
 
 input[type] {
   cursor: pointer;
+}
+
+.button-wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
 }
