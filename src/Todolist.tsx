@@ -40,6 +40,8 @@ export const Todolist = (props: PropsType)=> {
       <button onClick={ () => { props.changeFilter("completed") } }>
         Completed
       </button>
+    </div>
+    <div>
       <button onClick={props.removeAll}>Delete All</button>
     </div>
   </div>

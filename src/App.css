@@ -24,3 +24,10 @@
   opacity: 0.5;
 }
 
+button {
+  cursor: pointer;
+}
+
+input[type] {
+  cursor: pointer;
+}
